@@ -1,0 +1,13 @@
+@use 'sass:color';
+@use 'base/variables' as v;
+
+.footer {
+    background-color: v.$rosa;
+    padding: 3rem 0;
+
+    p {
+        color: v.$blanco;
+        margin: 0;
+        text-align: center;
+    }
+}

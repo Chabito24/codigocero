@@ -1,0 +1,82 @@
+@use 'sass:color';
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+    @include m.contenedor;
+
+    &-imagenes {
+        @include m.grid(1,1fr,2rem);
+
+        @include m.telefono {
+            @include m.grid(2,1fr,2rem);
+        }
+
+        @include m.tablet {
+            @include m.grid(3,1fr,2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(4,1fr,2rem);
+        }
+
+        img {
+            height: 20rem; //asignamos una altura para todas las imagenes
+            object-fit: cover; // con esta linea obligamos a que la imagen que ubique en ese contenedor
+        }
+
+    }
+}
+
+.modal {
+    position: fixed; //el elemento queda fijo no se puede mover
+    inset: 0;
+    background-color: rgba(color.scale(v.$negro, $lightness: -80%), 0.4);
+    display:grid;
+    place-items: center; //centra la imagen
+    animation: fadeIn ease-in 0.5s; //se complementa con @Keyframes para que tome la animacion sugerida en esa linea
+
+    &.fade-out {
+        animation: fadeOut ease-out 0.5s;
+    }
+
+    img {
+        max-width: 100rem;
+    }
+}
+
+//boton
+
+.btn-cerrar {
+    width: 4rem; //alto
+    height: 4rem; //ancho
+    border-radius: 50%; //borde redondo
+    background-color: v.$blanco; //fondo blanco
+    border: none; //sin borde
+    color: v.$negro; // color letra 
+    display: grid; //display
+    place-items: center; //centramos
+    font-weight: 700; // grosor fuente
+    cursor: pointer //cursor
+
+}
+
+
+//animación
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

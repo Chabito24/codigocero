@@ -1,0 +1,22 @@
+  /*@use 'base/variables' as v; // @use importa un archivo SCSS y encapsula sus variables/mixins en un alias, ejemplo v.
+  @forward 'base/normalize';// Se usa en archivos que necesitan acceder directamente a esos recursos.
+
+
+  
+  body {
+    font-family: v.$fuente_principal;
+    font-optical-sizing: auto;    font-style: normal;
+ }*/
+
+ // lo siguiente reemplaza el codigo anterior
+
+ //base ---> es la carpeta que almacena todos los scss
+
+ @use 'base'; //apuntamos a la carpeta base
+ @use 'layout'; //apuntamos a la carpeta layout
+
+
+
+ 
+
+

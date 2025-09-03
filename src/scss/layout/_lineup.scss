@@ -1,0 +1,72 @@
+@use 'sass:color';
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup {
+    background-color: v.$rosa; // asignamos fondo al lineup
+    h3, .dia { // h3 y .dia comparten texto centrado y en color blanco
+        text-align: center;
+        color: v.$blanco;
+    }
+    .dia { 
+        font-size: 3rem; //tamaño fuente
+        text-transform: uppercase; //transforma en layusculas
+    }
+}
+
+.escenarios-contenedor {
+    @include m.contenedor; //aplica el mixin de contenedor
+    @include m.tablet { //aplica mixin de tablet
+        @include m.grid (2); //incluimos mixin de grid asignamos solo la cantidad de columnas fraccion y gap se asignan con el valor por default del mixin
+    }
+}
+
+.escenario {
+    padding-top: 2rem; //se asigna un padding
+    .nombre-escenario {
+        font-size: 3rem; //tamaño fuente 3 rem
+        font-weight: 900; //negrilla
+        text-transform: uppercase; //mayusculas
+        text-align: center;//centrado@
+        
+    }
+}
+
+.calendario {
+    @include m.reset-list;
+
+    li {
+        padding:  2.5rem;
+        font-weight: 700;
+        span {
+        font-weight: 400;
+        }
+
+        transition: transform .2s ease-out;
+        &:hover {
+        transform:scale(1.1); 
+        }
+    }
+
+}
+
+.bg-amarillo { //tomamos la clase de bg-amarillo
+    background-color: v.$amarillo; //le asignamos un color amarillo desde _variables.scss
+    li:nth-child(odd) {  // selecciona solo los <li> en posiciones impares (1, 3, 5, …), para pares usar even
+        background-color: color.adjust(v.$amarillo, $lightness: 10%); //color.adjust  cambia el color base ajustando su lightness, v.$amarillo es el color que viene de las variables.scss y  $lightness: 5% aumenta la luminosidad en el porcentaje indicado
+    }
+
+} //Nota: en color.adjust, valores positivos de $lightness aclaran y valores negativos oscurecen.
+
+
+
+.bg-verde {
+    background-color: v.$verde; //le asignamos un color amarillo desde _variables.scss
+    li:nth-child(odd) {  // selecciona solo los <li> en posiciones impares (1, 3, 5, …), para pares usar even
+        background-color: color.adjust(v.$verde, $lightness: 5%); //color.adjust  cambia el color base ajustando su lightness, v.$amarillo es el color que viene de las variables.scss y  $lightness: 5% aumenta la luminosidad en el porcentaje indicado
+    }
+
+}
+
+
+

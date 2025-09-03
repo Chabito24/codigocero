@@ -1,0 +1,50 @@
+@use 'sass:color';
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video {
+    position: relative; //asignamos posicion relativa
+    min-height: 50rem; //asignamos un minimo de altura de 50 rem
+    max-height: 70rem; //asignamos un maximo de altura de 70 rem
+    overflow: hidden; //ocultamos el contenido que se salga del contenedor
+    .overlay {
+           position: absolute; //asignamos posicion absoluta   
+           background: linear-gradient(
+              270deg,
+              rgba(v.$morado, 0.6),
+              rgba(color.scale(v.$morado, $lightness: -20%), 0.9)
+              ); // `color.scale(..., $lightness: -20%)` mueve la *lightness* un 20% del camino hacia 0% (más oscuro),
+           inset: 0; //inset 0 es para que ocupe todo el espacio del video
+           display: flex;//flex para que los hijos se alineen uno al lado del otr
+           align-items: center; //alineamos los hijos al centro
+
+    }
+    video {
+        display: block; //para que el video ocupe todo el espacio del contenedor
+        width: auto; //ancho del video al automatico
+        @include m.desktop {
+            width: 100%; //en desktop el video ocupa todo el ancho del contenedor
+        }
+    }
+}
+
+.contenedor-video {
+    z-index: 10; //para que el contenedor del video este por encima del overlay
+
+    h2 {
+        color: v.$blanco;
+        font-size: 5rem;
+        margin: 0;
+        
+    }
+    
+    p {
+        background-color: v.$rosa;
+        color: v.$blanco;
+        display: inline-block; //para que el padding se ajuste al texto
+        padding: 1rem 2rem; //asignamos un padding
+        font-size: 2rem; //asignamos un tamaño de fuente
+        font-weight: 700; //asignamos un peso de fuente
+        margin: 0; //asignamos un margin
+    }
+}

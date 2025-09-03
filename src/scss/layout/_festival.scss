@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre-festival {
+    @include m.contenedor; //aplicamos el mixin contenedor
+    @include m.tablet {
+        @include m.grid(2,1fr,5rem); //aplicamos el mixin grid en pantallas de tablet en adelante
+    }
+}
+
+.contenido-festival {
+    margin-top: 5rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .fecha {
+        color: v.$verde;
+        font-weight: 500;
+        }
+}

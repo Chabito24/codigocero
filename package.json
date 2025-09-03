@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "sass:build": "sass --watch src/scss:build/css",
+    "build": "gulp build",
     "cer": "gulp"
   },
   "repository": {
@@ -27,7 +27,13 @@
     "sass": "^1.90.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.1.1",
+    "del": "^8.0.0",
     "gulp": "^5.0.1",
-    "gulp-sass": "^6.0.1"
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0"
   }
 }
