@@ -1,0 +1,33 @@
+{
+  "name": "codigo-cero",
+  "version": "1.0.0",
+  "description": "Sitio de cerrajería con Gulp+Sass",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --watch src/scss:build/css",
+    "cer": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chabito24/SASSyNPM.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Edward <emartinezj1802@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chabito24/SASSyNPM/issues"
+  },
+  "homepage": "https://chabito24.github.io/codigo-cero/",
+  "dependencies": {
+    "sass": "^1.90.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1"
+  }
+}
