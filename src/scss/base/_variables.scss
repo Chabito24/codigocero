@@ -4,12 +4,12 @@ $fuente_principal : "Montserrat", sans-serif; //reemplaza los custom properties
 
 
 // Colores
-$verde:#4CB8B3;
-$rosa: #F53756;
-$amarillo: #fdda00;
-$morado: #752F97;
-$negro: #000000;
-$blanco: #FFFFFF;
+$verde:   #2C7DA0;  // azul acero para detalles/links
+$rosa:    #D7263D;  // rojo CTA (llamar / WhatsApp urgente)
+$amarillo:#C8A24C;  // latón/oro para acentos y iconos de llaves
+$morado:  #0D1B2A;  // azul marino profundo (header/hero/footer)
+$negro:   #1F2937;  // gris carbón para textos principales
+$blanco:  #FFFFFF;  // fondos y textos sobre fondos oscuros
 
 // Media Queries
 

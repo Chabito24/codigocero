@@ -333,7 +333,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #000000;
+  color: #1F2937;
   font-size: 2rem;
 }
 body.overflow-hidden {
@@ -341,7 +341,7 @@ body.overflow-hidden {
 }
 
 p {
-  color: #000000;
+  color: #1F2937;
   line-height: 1.5;
 }
 
@@ -385,7 +385,7 @@ body > section {
 }
 
 .header {
-  background-color: #4CB8B3;
+  background-color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .header.fixed {
@@ -406,8 +406,12 @@ body > section {
     align-items: center;
   }
 }
+.header .logo {
+  max-width: 20%;
+  margin-top: 0;
+}
 .header h1 {
-  color: #FFFFFF;
+  color: #1F2937;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -429,11 +433,11 @@ body > section {
   }
 }
 .navegacion-principal a {
-  color: #FFFFFF;
+  color: #1F2937;
   font-size: 2.4rem;
 }
 .navegacion-principal a:hover, .navegacion-principal a.active {
-  color: #fdda00;
+  color: #C8A24C;
 }
 
 .video {
@@ -444,7 +448,7 @@ body > section {
 }
 .video .overlay {
   position: absolute;
-  background: linear-gradient(270deg, rgba(117, 47, 151, 0.6), rgba(93.6, 37.6, 120.8, 0.9));
+  background: linear-gradient(270deg, rgba(13, 27, 42, 0.6), rgba(10.4, 21.6, 33.6, 0.9));
   inset: 0;
   display: flex;
   align-items: center;
@@ -454,6 +458,11 @@ body > section {
   width: auto;
 }
 @media (min-width: 1200px) {
+  .video video {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
   .video video {
     width: 100%;
   }
@@ -468,7 +477,7 @@ body > section {
   margin: 0;
 }
 .contenedor-video p {
-  background-color: #F53756;
+  background-color: #C8A24C;
   color: #FFFFFF;
   display: inline-block;
   padding: 1rem 2rem;
@@ -497,12 +506,12 @@ body > section {
   margin-bottom: 2rem;
 }
 .contenido-festival .fecha {
-  color: #4CB8B3;
+  color: #2C7DA0;
   font-weight: 500;
 }
 
 .lineup {
-  background-color: #F53756;
+  background-color: #D7263D;
 }
 .lineup h3, .lineup .dia {
   text-align: center;
@@ -554,17 +563,17 @@ body > section {
 }
 
 .bg-amarillo {
-  background-color: #fdda00;
+  background-color: #C8A24C;
 }
 .bg-amarillo li:nth-child(odd) {
-  background-color: rgb(255, 226.5019762846, 49);
+  background-color: rgb(211.9871794872, 182.2692307692, 115.0128205128);
 }
 
 .bg-verde {
-  background-color: #4CB8B3;
+  background-color: #2C7DA0;
 }
 .bg-verde li:nth-child(odd) {
-  background-color: rgb(94.258, 191.242, 186.752);
+  background-color: rgb(49.5, 140.625, 180);
 }
 
 .galeria {
@@ -607,7 +616,7 @@ body > section {
 .modal {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(6.2, 8.2, 11, 0.4);
   display: grid;
   place-items: center;
   animation: fadeIn ease-in 0.5s;
@@ -616,7 +625,7 @@ body > section {
   animation: fadeOut ease-out 0.5s;
 }
 .modal img {
-  max-width: 100rem;
+  max-width: 50rem;
 }
 
 .btn-cerrar {
@@ -625,7 +634,7 @@ body > section {
   border-radius: 50%;
   background-color: #FFFFFF;
   border: none;
-  color: #000000;
+  color: #1F2937;
   display: grid;
   place-items: center;
   font-weight: 700;
@@ -649,7 +658,7 @@ body > section {
   }
 }
 .contenedor-boletos {
-  background-color: #4CB8B3;
+  background-color: #2C7DA0;
 }
 .contenedor-boletos h3 {
   color: #FFFFFF;
@@ -688,7 +697,7 @@ body > section {
   margin: 0;
 }
 .pase-header {
-  background-color: #F53756;
+  background-color: #D7263D;
 }
 .pase-header p {
   text-transform: uppercase;
@@ -714,18 +723,21 @@ body > section {
 .pase-footer p {
   font-size: 2.8rem;
   font-weight: 900;
-  background-color: #752F97;
+  background-color: #0D1B2A;
   padding: 1rem 0;
   border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 .pase-footer p:hover {
-  background-color: rgb(152.8909090909, 64.6484848485, 195.7515151515);
+  background-color: rgb(34.5090909091, 71.6727272727, 111.4909090909);
+}
+.pase-footer p a {
+  color: #FFFFFF;
 }
 
 .footer {
-  background-color: #F53756;
+  background-color: #D7263D;
   padding: 3rem 0;
 }
 .footer p {

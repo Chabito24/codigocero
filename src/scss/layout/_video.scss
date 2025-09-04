@@ -25,6 +25,9 @@
         @include m.desktop {
             width: 100%; //en desktop el video ocupa todo el ancho del contenedor
         }
+        @include m.tablet {
+            width: 100%;
+        }
     }
 }
 
@@ -39,7 +42,7 @@
     }
     
     p {
-        background-color: v.$rosa;
+        background-color: v.$amarillo;
         color: v.$blanco;
         display: inline-block; //para que el padding se ajuste al texto
         padding: 1rem 2rem; //asignamos un padding

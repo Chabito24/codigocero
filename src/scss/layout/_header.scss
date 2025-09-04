@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .header {
-    background-color: v.$verde;
+    background-color: v.$blanco;
 
     @include m.tablet {
         &.fixed {
@@ -26,8 +26,13 @@
         
     }
 
+    .logo {
+        max-width: 20%;
+        margin-top: 0;
+    }
+
     h1 {
-        color: v.$blanco;
+        color: v.$negro;
         text-align: center; // centramos el texto
         @include m.tablet{
             text-align: left; // alineamos el texto a la izquierda 
@@ -45,7 +50,7 @@
         flex-direction: row; // las pantallas de tablet arriba muestran la navegacion horizontal    
     }
     a {
-        color: v.$blanco;
+        color: v.$negro;
         font-size: 2.4rem;
         &:hover,
         &.active { //el ampersant une la a y el hover si no la ponemos la deja como elemento separado y no funcionaria el :hover

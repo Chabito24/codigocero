@@ -28,7 +28,7 @@ function crearGaleria() { // Define la función que genera dinámicamente las im
     // Bucle para crear y agregar varias imágenes a la galería
     for(let i = 1; i <= cantidadImagenes; i++) { // Inicializa i=1; ⚠️ OJO: la condición "1 <= 16" es SIEMPRE verdadera (bucle infinito). Debería ser "i <= 16".
         const imagen = document.createElement('IMG') // Crea un elemento <img> (las etiquetas HTML no son sensibles a mayúsculas/minúsculas)
-        imagen.src = `src/img/gallery/full/${i}.jpg` // Define la ruta de la imagen usando plantillas: 1.jpg, 2.jpg, ... 16.jpg
+        imagen.src = `src/img/gallery/full/${i}.png` // Define la ruta de la imagen usando plantillas: 1.jpg, 2.jpg, ... 16.jpg
         imagen.alt = 'Imagen Galeria' // Texto alternativo para accesibilidad y cuando la imagen no se puede mostrar
 
         //Event Handler - es el proceso de detectar y responder a una interaccion del usuario en este caso a un clik
@@ -44,7 +44,7 @@ function crearGaleria() { // Define la función que genera dinámicamente las im
 function mostrarImagen(i) { // Función que crea y muestra el modal con la imagen ampliada
 
     const imagen = document.createElement('IMG') // Crea una etiqueta <img> para el modal
-    imagen.src = `src/img/gallery/full/${i}.jpg` // Apunta a la misma imagen pero para mostrarla en grande
+    imagen.src = `src/img/gallery/full/${i}.png` // Apunta a la misma imagen pero para mostrarla en grande
     imagen.alt = 'Imagen Galeria' // Texto alternativo para la imagen
 
     //Generar Modal
