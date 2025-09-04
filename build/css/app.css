@@ -407,7 +407,9 @@ body > section {
   }
 }
 .header .logo {
+  display: block;
   max-width: 20%;
+  height: auto;
   margin-top: 0;
 }
 .header h1 {
